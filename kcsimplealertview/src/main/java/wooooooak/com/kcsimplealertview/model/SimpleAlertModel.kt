@@ -5,9 +5,9 @@ import android.view.View
 class SimpleAlertModel(
     var customLayout: View? = null
 ) {
-    var title: AlertViewTextModel? = null
-    var message: AlertViewTextModel? = null
-    val buttonList: MutableList<AlertViewButtonModel> = mutableListOf()
+    internal var title: AlertViewTextModel? = null
+    internal var message: AlertViewTextModel? = null
+    internal val buttonList: MutableList<AlertViewButtonModel> = mutableListOf()
 
     fun button(init: AlertViewButtonModel.() -> Unit) {
         buttonList.add(AlertViewButtonModel().apply(init))
