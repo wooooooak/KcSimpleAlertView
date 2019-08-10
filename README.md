@@ -1,7 +1,5 @@
 # KcSimpleAlertView
 
----
-
 ## Sample image
 
 ![image](https://user-images.githubusercontent.com/18481078/62819785-164a4c80-bb95-11e9-9fda-f293a4578780.png)
