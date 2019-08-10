@@ -1,6 +1,7 @@
 package wooooooak.com.simplealertview
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 textSize = 14
                 textColor = ContextCompat.getColor(this@MainActivity, R.color.colorAccent)
             }
+            customLayout = LayoutInflater.from(this@MainActivity).inflate(R.layout.custom_layout,
+                null, false)
             button {
                 text = "1st button"
                 onClick = {
