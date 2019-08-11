@@ -27,7 +27,7 @@ dependencies {
 }
 ```
 
-The latest version is **1.0.1**. Checkout [here](https://github.com/wooooooak/KcSimpleAlertView/releases)
+The latest version is **1.0.2**. Checkout [here](https://github.com/wooooooak/KcSimpleAlertView/releases)
 
 ## Usage
 
@@ -37,7 +37,7 @@ The latest version is **1.0.1**. Checkout [here](https://github.com/wooooooak/Kc
 
 #### SimpleAlertView (kotlin dsl)
 
-In your activity or fragment
+**In your activity or fragment**
 
 ```kotlin
 val simpleAlertView = SimpleAlertView(activity) {
@@ -66,16 +66,20 @@ val simpleAlertView = SimpleAlertView(activity) {
 simpleAlertView.show()
 ```
 
-## What you can customize
+## What you can customizable
 
 #### title
 
-| attribute  | type     |
-| :--------- | :------- |
-| text       | String   |
-| textColor  | Int      |
-| textSize   | Int      |
-| fontFamily | Typeface |
+| attribute     | type     |
+| :------------ | :------- |
+| text          | String   |
+| textColor     | Int      |
+| textSize      | Int      |
+| fontFamily    | Typeface |
+| paddingLeft   | Int      |
+| paddingRight  | Int      |
+| paddingTop    | Int      |
+| paddingBottom | Int      |
 
 #### message
 
@@ -96,13 +100,17 @@ Same as title
 | textSize        | Int                   |
 | fontFamily      | Typeface              |
 | backgroundColor | Int                   |
+| paddingLeft     | Int                   |
+| paddingRight    | Int                   |
+| paddingTop      | Int                   |
+| paddingBottom   | Int                   |
 | onClick         | () -> Unit [function] |
 
 **You can add several buttons. But It will be added only horizontal.**
 
 ## Contribution
 
-All PR or Issues are welcome!
+All Pull Request and Issues are welcome!
 
 ## License
 
