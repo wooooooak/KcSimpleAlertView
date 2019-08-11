@@ -1,4 +1,5 @@
 package wooooooak.dev.kcsimplealertview.woakalertview
+
 import android.content.Context
 import android.os.Bundle
 import android.view.Gravity
@@ -9,11 +10,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
-import wooooooak.dev.kcsimplealertview.woakalertview.model.AlertViewButtonModel
-import wooooooak.dev.kcsimplealertview.woakalertview.model.SimpleAlertModel
-import wooooooak.dev.kcsimplealertview.woakalertview.model.AlertViewTextModel
 import kotlinx.android.synthetic.main.alert_layout.view.*
 import wooooooak.com.kcsimplealertview.R
+import wooooooak.dev.kcsimplealertview.woakalertview.model.AlertViewButtonModel
+import wooooooak.dev.kcsimplealertview.woakalertview.model.AlertViewTextModel
+import wooooooak.dev.kcsimplealertview.woakalertview.model.SimpleAlertModel
 
 class CustomDialogFragment(
     private val simpleAlertModel: SimpleAlertModel
@@ -58,6 +59,7 @@ class CustomDialogFragment(
             fontFamily?.let { view.typeface = it }
         }
         view.run {
+            setPadding(attr.paddingLeft, attr.paddingTop, attr.paddingRight, attr.paddingBottom)
             setTextColor(attr.textColor)
             textSize = attr.textSize.toFloat()
         }
@@ -80,7 +82,10 @@ class CustomDialogFragment(
             text = buttonModel.text
             textSize = buttonModel.textSize.toFloat()
             buttonModel.fontFamily?.let { typeface = it }
-            setPadding(16, 32, 16, 32)
+            setPadding(
+                buttonModel.paddingLeft, buttonModel.paddingTop, buttonModel.paddingRight,
+                buttonModel.paddingBottom
+            )
             setTextColor(buttonModel.textColor)
             setBackgroundColor(buttonModel.backgroundColor)
             setOnClickListener {
