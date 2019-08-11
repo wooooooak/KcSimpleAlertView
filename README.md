@@ -37,7 +37,7 @@ The latest version is **1.0.1**. Checkout [here](https://github.com/wooooooak/Kc
 
 #### SimpleAlertView (kotlin dsl)
 
-**In your activity or fragment**
+In your activity or fragment
 
 ```kotlin
 val simpleAlertView = SimpleAlertView(activity) {
@@ -66,7 +66,7 @@ val simpleAlertView = SimpleAlertView(activity) {
 simpleAlertView.show()
 ```
 
-## What you can customizable
+## What you can customize
 
 #### title
 
