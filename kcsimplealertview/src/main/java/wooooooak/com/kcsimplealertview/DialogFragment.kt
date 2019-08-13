@@ -1,6 +1,7 @@
 package wooooooak.dev.kcsimplealertview.woakalertview
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -17,7 +18,8 @@ import wooooooak.dev.kcsimplealertview.woakalertview.model.AlertViewTextModel
 import wooooooak.dev.kcsimplealertview.woakalertview.model.SimpleAlertModel
 
 class CustomDialogFragment(
-    private val simpleAlertModel: SimpleAlertModel
+    private val simpleAlertModel: SimpleAlertModel,
+    private val layoutDrawable: Drawable?
 ) : DialogFragment() {
 
     private lateinit var dialogView: LinearLayout
@@ -33,6 +35,7 @@ class CustomDialogFragment(
         savedInstanceState: Bundle?
     ): View? {
         dialogView = inflater.inflate(R.layout.alert_layout, container, false).apply {
+            background = layoutDrawable
             with(simpleAlertModel) {
                 title?.let { setTextViewAttr(title_text, it) } ?: run {
                     title_text.visibility = View.GONE
@@ -52,6 +55,8 @@ class CustomDialogFragment(
 
         return dialogView
     }
+
+
 
     private fun setTextViewAttr(view: TextView, attr: AlertViewTextModel) {
         attr.run {

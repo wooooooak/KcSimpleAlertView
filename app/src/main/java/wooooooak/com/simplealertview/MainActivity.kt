@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import wooooooak.com.kcsimplealertview.AlertStyle
 import wooooooak.dev.kcsimplealertview.woakalertview.SimpleAlertView
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAlertView() {
-        SimpleAlertView(this) {
+        val simpleAlertView = SimpleAlertView(this) {
             title {
                 text = "Title!"
                 textSize = 20
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             message {
                 text = "this is message"
                 textSize = 14
-                textColor = ContextCompat.getColor(this@MainActivity, R.color.colorAccent)
+                textColor = ContextCompat.getColor(this@MainActivity, R.color.colorGray7)
             }
             customLayout = LayoutInflater.from(this@MainActivity).inflate(R.layout.custom_layout,
                 null, false)
@@ -47,6 +48,8 @@ class MainActivity : AppCompatActivity() {
                 fontFamily =
                     ResourcesCompat.getFont(this@MainActivity, R.font.noto_sans_extra_bold_italic)
             }
-        }.show()
+        }
+        simpleAlertView.setStyleTheme(AlertStyle.WHITE_RECTANGLE)
+        simpleAlertView.show()
     }
 }
