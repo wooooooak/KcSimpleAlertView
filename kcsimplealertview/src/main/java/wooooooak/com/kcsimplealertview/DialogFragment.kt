@@ -71,7 +71,7 @@ class CustomDialogFragment(
     }
 
     private fun makeDividerView(context: Context) = View(context).apply {
-        layoutParams = LinearLayout.LayoutParams(1, LinearLayout.LayoutParams.MATCH_PARENT)
+        layoutParams = LinearLayout.LayoutParams(2, LinearLayout.LayoutParams.MATCH_PARENT)
         alpha = 0.1f
         setBackgroundColor(ContextCompat.getColor(context, R.color.colorDivider))
     }
