@@ -108,6 +108,23 @@ Same as title
 
 **You can add several buttons. But It will be added only horizontal.**
 
+## Theme
+
+| theme           | description              |
+| --------------- | ------------------------ |
+| WHITE_BORDER    | rectangle with border    |
+| WHITE_RECTANGLE | rectangle with no border |
+
+#### Usage
+
+```kotlin
+simpleAlertView.setStyleTheme(AlertStyle.WHITE_RECTANGLE)
+or
+simpleAlertView.setStyleTheme(AlertStyle.WHITE_BORDER)
+```
+
+If you have any idea about theme, plz contribute to this progject.
+
 ## Contribution
 
 All Pull Request and Issues are welcome!
