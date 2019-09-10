@@ -56,8 +56,6 @@ class CustomDialogFragment(
         return dialogView
     }
 
-
-
     private fun setTextViewAttr(view: TextView, attr: AlertViewTextModel) {
         attr.run {
             text?.let { view.text = it }

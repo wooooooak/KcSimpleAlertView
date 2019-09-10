@@ -12,9 +12,7 @@ class SimpleAlertView(
     initAttr: SimpleAlertModel.() -> Unit
 ) {
     private val alertModel = SimpleAlertModel().apply { initAttr() }
-
     private var styleTheme: AlertStyle = AlertStyle.WHITE_BORDER
-
     private var customLayoutDrawable: Drawable? = null
 
     fun show() {
