@@ -66,9 +66,9 @@ val simpleAlertView = SimpleAlertView(activity) {
 simpleAlertView.show()
 ```
 
-## customizable
+## Customizable
 
-#### title
+#### Title
 
 | attribute     | type     |
 | :------------ | :------- |
@@ -81,17 +81,17 @@ simpleAlertView.show()
 | paddingTop    | Int      |
 | paddingBottom | Int      |
 
-#### message
+#### Message
 
 Same as title
 
-#### customLayout
+#### CustomLayout
 
 | attribute    | type |
 | :----------- | :--- |
 | customLayout | View |
 
-#### button
+#### Button
 
 | attribute       | type                  |
 | :-------------- | :-------------------- |
