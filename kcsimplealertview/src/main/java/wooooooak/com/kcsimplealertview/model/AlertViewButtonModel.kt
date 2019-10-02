@@ -1,5 +1,7 @@
 package wooooooak.dev.kcsimplealertview.woakalertview.model
 
+import androidx.annotation.DimenRes
+
 class AlertViewButtonModel(
     var text: String = "",
     override var textSize: Int = 17,

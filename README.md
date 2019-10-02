@@ -66,7 +66,7 @@ val simpleAlertView = SimpleAlertView(activity) {
 simpleAlertView.show()
 ```
 
-## What you can customizable
+## customizable
 
 #### title
 
