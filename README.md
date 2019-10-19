@@ -27,7 +27,7 @@ dependencies {
 }
 ```
 
-The latest version is **1.1.0**. Checkout [here](https://github.com/wooooooak/KcSimpleAlertView/releases)
+The latest version is **1.1.1**. Checkout [here](https://github.com/wooooooak/KcSimpleAlertView/releases)
 
 ## Usage
 
