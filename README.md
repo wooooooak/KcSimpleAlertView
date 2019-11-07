@@ -27,7 +27,7 @@ dependencies {
 }
 ```
 
-The latest version is **1.1.1**. Checkout [here](https://github.com/wooooooak/KcSimpleAlertView/releases)
+The latest version is **1.1.2**. Checkout [here](https://github.com/wooooooak/KcSimpleAlertView/releases)
 
 ## Usage
 
@@ -43,7 +43,7 @@ The latest version is **1.1.1**. Checkout [here](https://github.com/wooooooak/Kc
 val simpleAlertView = SimpleAlertView(activity) {
     title {
         text = "Title!"
-        textSize = 20
+        textSize = resources.getDimension(R.dimen.sample_text_size)
     }
     message {
         text = "this is message"
@@ -58,6 +58,7 @@ val simpleAlertView = SimpleAlertView(activity) {
     }
     button {
         text = "2nd button"
+        textSize = resources.getDimension(R.dimen.sample_text_size)
         fontFamily = ResourcesCompat.getFont(context, R.font.your_font)
     }
 }
@@ -74,7 +75,7 @@ simpleAlertView.show()
 | :------------ | :------- |
 | text          | String   |
 | textColor     | Int      |
-| textSize      | Int      |
+| textSize      | Float    |
 | fontFamily    | Typeface |
 | paddingLeft   | Int      |
 | paddingRight  | Int      |
@@ -97,7 +98,7 @@ Same as title
 | :-------------- | :-------------------- |
 | text            | String                |
 | textColor       | Int                   |
-| textSize        | Int                   |
+| textSize        | Float                 |
 | fontFamily      | Typeface              |
 | backgroundColor | Int                   |
 | paddingLeft     | Int                   |
