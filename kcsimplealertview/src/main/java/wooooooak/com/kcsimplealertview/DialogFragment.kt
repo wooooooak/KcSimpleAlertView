@@ -3,6 +3,7 @@ package wooooooak.dev.kcsimplealertview.woakalertview
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -64,7 +65,7 @@ class CustomDialogFragment(
         view.run {
             setPadding(attr.paddingLeft, attr.paddingTop, attr.paddingRight, attr.paddingBottom)
             setTextColor(attr.textColor)
-            textSize = attr.textSize.toFloat()
+            setTextSize(TypedValue.COMPLEX_UNIT_PX, attr.textSize)
         }
     }
 
@@ -83,7 +84,7 @@ class CustomDialogFragment(
             )
             gravity = Gravity.CENTER
             text = buttonModel.text
-            textSize = buttonModel.textSize.toFloat()
+            setTextSize(TypedValue.COMPLEX_UNIT_PX, buttonModel.textSize.toFloat())
             buttonModel.fontFamily?.let { typeface = it }
             setPadding(
                 buttonModel.paddingLeft, buttonModel.paddingTop, buttonModel.paddingRight,

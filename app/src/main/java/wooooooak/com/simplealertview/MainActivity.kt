@@ -27,17 +27,18 @@ class MainActivity : AppCompatActivity() {
         val simpleAlertView = SimpleAlertView(this) {
             title {
                 text = "Title!"
-                textSize = 20
+                textSize = resources.getDimension(R.dimen.sample_text_size)
             }
             message {
                 text = "this is message"
-                textSize = 14
+                textSize = resources.getDimension(R.dimen.sample_text_size2)
                 textColor = ContextCompat.getColor(this@MainActivity, R.color.colorGray7)
             }
             customLayout = LayoutInflater.from(this@MainActivity).inflate(R.layout.custom_layout,
                 null, false)
             button {
                 text = "1st button"
+                textSize = resources.getDimension(R.dimen.sample_text_size2)
                 onClick = {
                     Toast.makeText(this@MainActivity, "on click 1st button", Toast.LENGTH_SHORT)
                         .show()
@@ -45,11 +46,12 @@ class MainActivity : AppCompatActivity() {
             }
             button {
                 text = "2nd button"
+                textSize = resources.getDimension(R.dimen.sample_text_size2)
                 fontFamily =
                     ResourcesCompat.getFont(this@MainActivity, R.font.noto_sans_extra_bold_italic)
             }
         }
-        simpleAlertView.setStyleTheme(AlertStyle.WHITE_RECTANGLE)
+        simpleAlertView.setStyleTheme(AlertStyle.WHITE_BORDER)
         simpleAlertView.show()
     }
 }

@@ -5,7 +5,7 @@ import android.graphics.Typeface
 
 open class BaseAlertViewModel {
     open var textColor: Int = Color.parseColor("#000000")
-    open var textSize: Int = 14
+    open var textSize: Float = 14f
     open var fontFamily: Typeface? = null
     open var paddingLeft: Int = 16
     open var paddingRight: Int = 16

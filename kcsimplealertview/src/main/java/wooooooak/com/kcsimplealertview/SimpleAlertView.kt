@@ -40,9 +40,4 @@ class SimpleAlertView(
         styleTheme = value
     }
 
-    fun setCustomLayoutDrawable(drawable: Drawable) {
-        customLayoutDrawable = drawable
-    }
-
-
 }
