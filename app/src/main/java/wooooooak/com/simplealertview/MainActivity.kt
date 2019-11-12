@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                 null, false)
             button {
                 text = "1st button"
-                textSize = resources.getDimension(R.dimen.sample_text_size2)
                 onClick = {
                     Toast.makeText(this@MainActivity, "on click 1st button", Toast.LENGTH_SHORT)
                         .show()
@@ -46,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             }
             button {
                 text = "2nd button"
-                textSize = resources.getDimension(R.dimen.sample_text_size2)
                 fontFamily =
                     ResourcesCompat.getFont(this@MainActivity, R.font.noto_sans_extra_bold_italic)
             }

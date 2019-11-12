@@ -65,7 +65,10 @@ class CustomDialogFragment(
         view.run {
             setPadding(attr.paddingLeft, attr.paddingTop, attr.paddingRight, attr.paddingBottom)
             setTextColor(attr.textColor)
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, attr.textSize)
+            setTextSize(
+                TypedValue.COMPLEX_UNIT_PX, attr.textSize ?: resources
+                    .getDimension(R.dimen.alert_view_default_text_size)
+            )
         }
     }
 
@@ -84,7 +87,10 @@ class CustomDialogFragment(
             )
             gravity = Gravity.CENTER
             text = buttonModel.text
-            setTextSize(TypedValue.COMPLEX_UNIT_PX, buttonModel.textSize.toFloat())
+            setTextSize(
+                TypedValue.COMPLEX_UNIT_PX, buttonModel.textSize ?: resources
+                    .getDimension(R.dimen.alert_view_default_text_size)
+            )
             buttonModel.fontFamily?.let { typeface = it }
             setPadding(
                 buttonModel.paddingLeft, buttonModel.paddingTop, buttonModel.paddingRight,
