@@ -11,19 +11,28 @@ class SimpleAlertView(
     private val activity: AppCompatActivity,
     initAttr: SimpleAlertModel.() -> Unit
 ) {
+    var cancelable = true
     private val alertModel = SimpleAlertModel().apply { initAttr() }
     private var styleTheme: AlertStyle = AlertStyle.WHITE_BORDER
     private var customLayoutDrawable: Drawable? = null
 
     fun show() {
         customLayoutDrawable?.let {
-            val dialogFragment = CustomDialogFragment(alertModel, it)
+            val dialogFragment = CustomDialogFragment(alertModel, it).apply {
+                isCancelable = cancelable
+            }
             dialogFragment.show(activity.supportFragmentManager, dialogFragment.tag)
         } ?: run {
             val layoutDrawable = getDrawableByTheme()
-            val dialogFragment = CustomDialogFragment(alertModel, layoutDrawable)
+            val dialogFragment = CustomDialogFragment(alertModel, layoutDrawable).apply {
+                isCancelable = cancelable
+            }
             dialogFragment.show(activity.supportFragmentManager, dialogFragment.tag)
         }
+    }
+
+    fun setStyleTheme(value: AlertStyle) {
+        styleTheme = value
     }
 
     private fun getDrawableByTheme() =
@@ -35,9 +44,5 @@ class SimpleAlertView(
                 activity, R.drawable.alert_white_rectangle
             )
         }
-
-    fun setStyleTheme(value: AlertStyle) {
-        styleTheme = value
-    }
 
 }

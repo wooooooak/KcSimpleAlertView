@@ -49,7 +49,8 @@ class MainActivity : AppCompatActivity() {
                     ResourcesCompat.getFont(this@MainActivity, R.font.noto_sans_extra_bold_italic)
             }
         }
-        simpleAlertView.setStyleTheme(AlertStyle.WHITE_BORDER)
+//        simpleAlertView.cancelable = false
+//        simpleAlertView.setStyleTheme(AlertStyle.WHITE_BORDER)
         simpleAlertView.show()
     }
 }
